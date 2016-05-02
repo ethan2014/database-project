@@ -50,13 +50,13 @@
     $id = $_GET['id'];
     $msg = $_GET['msg'];
     
-    $db = new SQLite3('database.db');
+    $db = new SQLite3('rocketleague.db');
     $query = 'SELECT * FROM profile WHERE p_id = ' . $id;
 
     $res = $db->query($query);
 
     while ($row = $res->fetchArray()) {
-	$name = $row['name'];
+	$name = $row['username'];
 	$clan = $row['clan'];
 	$email = $row['email'];
     }

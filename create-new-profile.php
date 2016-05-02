@@ -16,7 +16,7 @@ if (strlen($name) === 0 || strlen($clan) === 0 || strlen($email) === 0) {
     exit();
 }
 
-$db = new SQLite3('database.db');
+$db = new SQLite3('rocketleague.db');
 
 $query = "INSERT INTO profile VALUES(" . rand() . ",'" . $name . "','" . $email . "','" . $clan . "');";
 $db->exec($query);

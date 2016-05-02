@@ -55,10 +55,8 @@
 	<br />
 	<?php
 	
-	$db = new SQLite3('database.db');
-	$query = 'SELECT * FROM profile ' .
-		 'NATURAL LEFT JOIN player_statistics ' .
-		 'NATURAL LEFT JOIN player_car;';
+	$db = new SQLite3('rocketleague.db');
+	$query = 'SELECT * FROM profile';
 
 	$res = $db->query($query);
 
@@ -79,7 +77,7 @@
 
 	    echo '<div id="player-list-con" class="jumbotron">';
 	    echo '<div id="player-name" class="row">';
-	    echo '<p class="col-md-4"><b>' . getValue($row, 'name') . '</b></p>';
+	    echo '<p class="col-md-4"><b>' . getValue($row, 'username') . '</b></p>';
 	    echo '<a href="/update-profile.php?id=' . $id . '" class="btn btn-info player-update-btn col-md-offset-6 col-md-1">Update</a>';
 	    echo '<a href="/delete-profile.php?id=' . $id . '" class="btn btn-danger player-del-btn col-md-1">Delete</a>';
 	    echo '</div>';

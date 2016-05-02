@@ -53,11 +53,14 @@
 
 	$id = $_GET['id'];
 	
-	$db = new SQLite3('database.db');
+	$db = new SQLite3('rocketleague.db');
 	$query = 'SELECT * FROM profile ' .
 		 'NATURAL LEFT JOIN player_statistics ' .
 		 'NATURAL LEFT JOIN player_car ' .
 		 'WHERE p_id = ' . $id;
+
+	$itemQuery = 'SELECT * FROM item ' .
+		     'WHERE item_id = ';
 
 	$res = $db->query($query);
 
@@ -74,21 +77,32 @@
 	while ($row = $res->fetchArray()) {
 	    echo '<div id="player-list-con" class="jumbotron">';
 	    echo '<div class="player-stats-con row">';
-	    echo '<h3>Stats for ' . getValue($row, 'name') . '</h3>';
+	    echo '<h3>Stats for ' . getValue($row, 'username') . '</h3>';
 	    echo '<p><b>Player Info</b></p>';
 	    echo '<p>Clan: ' . getValue($row, 'clan') . '</p>';
 	    echo '<p>Email: ' . getValue($row, 'email') . '</p>';
 	    echo '<br />';
 	    echo '<p><b>Player Stats</b></p>';
-	    echo '<p>Goals: ' . getValue($row, 'goals') . '</p>';
-	    echo '<p>Saves: ' . getValue($row, 'saves') . '</p>';
+	    echo '<p>Goals: ' . getValue($row, 'total_goals') . '</p>';
+	    echo '<p>Saves: ' . getValue($row, 'total_saves') . '</p>';
 	    echo '<p>Matches Played: ' . getValue($row, 'matches_played') . '</p>';
+	    echo '<p>Time Played: ' . getValue($row, 'time_played') . '</p>';
 	    echo '<br />';
 	    echo '<p><b>Current Car</b></p>';
 	    echo '<p>Name: ' . getValue($row, 'car_name') . '</p>';
-	    echo '<p>Atenna: ' . getValue($row, 'antenna') . '</p>';
-	    echo '<p>Topper: ' . getValue($row, 'topper') . '</p>';
-	    echo '<p>Wheels: ' . getValue($row, 'wheels') . '</p>';
+	    
+	    $antenna = $db->query($itemQuery . $row['antenna_id']);
+	    $r = $antenna->fetchArray();
+	    echo '<p>Antenna: ' . getValue($r, 'item_name') . '</p>';
+
+	    $topper = $db->query($itemQuery . $row['topper_id']);
+	    $r = $topper->fetchArray();
+	    echo '<p>Topper: ' . getValue($r, 'item_name') . '</p>';
+
+	    $wheel = $db->query($itemQuery . $row['wheel_id']);
+	    $r = $wheel->fetchArray();
+	    echo '<p>Wheels: ' . getValue($r, 'item_name') . '</p>';
+
 	    echo '</div>';
 	    echo '</div>';
 	}

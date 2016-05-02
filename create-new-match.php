@@ -1,5 +1,6 @@
 <?php
 
+$matchId = rand();
 $duration = $_GET['duration'];
 $blueGoals = $_GET['blue-goals'];
 $orangeGoals = $_GET['orange-goals'];
@@ -34,15 +35,41 @@ $saves11 = $_GET['saves1-1'];
 $saves12 = $_GET['saves1-2'];
 $saves13 = $_GET['saves1-3'];
 
-$db = new SQLite3('database.db');
+$db = new SQLite3('rocketleague.db');
 
-$query = "INSERT INTO " .
-       "" .
-       "" .
-       "" .
-       "";
+$matchQuery = "INSERT INTO match " .
+            "(m_id, duration, b_goals, r_goals, winning_team)" .
+            "VALUES($matchId, $duration, $blueGoals, $orangeGoals, $winner)";
 
-$db->exec($query);
+$playerQuery = "INSERT INTO participates_in " .
+             "(p_id, m_id, team, goals, saves, distance_driven, duration, demos)" .
+             "($id01, $matchId, 0, $goals01, $saves01, $distance01, 0, 0)";
+$db->exec($matchQuery);
+
+$playerQuery = "INSERT INTO participates_in " .
+             "(p_id, m_id, team, goals, saves, distance_driven, duration, demos)" .
+             "($id02, $matchId, 0, $goals02, $saves02, $distance02, 0, 0)";
+$db->exec($matchQuery);
+
+$playerQuery = "INSERT INTO participates_in " .
+             "(p_id, m_id, team, goals, saves, distance_driven, duration, demos)" .
+             "($id03, $matchId, 0, $goals03, $saves03, $distance03, 0, 0)";
+$db->exec($matchQuery);
+
+$playerQuery = "INSERT INTO participates_in " .
+             "(p_id, m_id, team, goals, saves, distance_driven, duration, demos)" .
+             "($id11, $matchId, 1, $goals11, $saves11, $distance11, 0, 0)";
+$db->exec($matchQuery);
+
+$playerQuery = "INSERT INTO participates_in " .
+             "(p_id, m_id, team, goals, saves, distance_driven, duration, demos)" .
+             "($id12, $matchId, 1, $goals12, $saves12, $distance12, 0, 0)";
+$db->exec($matchQuery);
+
+$playerQuery = "INSERT INTO participates_in " .
+             "(p_id, m_id, team, goals, saves, distance_driven, duration, demos)" .
+             "($id13, $matchId, 1, $goals13, $saves13, $distance13, 0, 0)";
+$db->exec($matchQuery);
 
 header("Location: index.html");
 exit();

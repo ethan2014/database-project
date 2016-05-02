@@ -79,7 +79,7 @@
 	</script>
 
 	<?php
-	$db = new SQLite3('database.db');
+	$db = new SQLite3('rocketleague.db');
 	$query = 'SELECT * FROM profile';
 
 	$res = $db->query($query);
@@ -88,7 +88,7 @@
 
 	while ($row = $res->fetchArray()) {
 	    $id = $row['P_id'];
-	    $name = $row['name'];
+	    $name = $row['username'];
 
 	    $players[$id] = $name;
 	}

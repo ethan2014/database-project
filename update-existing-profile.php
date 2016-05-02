@@ -15,10 +15,10 @@ if (strlen($name) === 0 || strlen($clan) === 0 || strlen($email) === 0) {
     exit();
 }
 
-$db = new SQLite3('database.db');
+$db = new SQLite3('rocketleague.db');
 
 $query = "UPDATE profile SET " .
-       "name = '" . $name . "'," .
+       "username = '" . $name . "'," .
        "clan = '" . $clan . "'," .
        "email = '" . $email . "' " .
        "WHERE P_id = " . $id;
