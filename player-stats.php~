@@ -88,6 +88,17 @@
 	    echo '<p>Clan: ' . getValue($row, 'clan') . '</p>';
 	    echo '<p>Email: ' . getValue($row, 'email') . '</p>';
 	    echo '<a class="btn btn-info" href="' . $link . '">Stats</a>';
+	    echo '<br />';
+	    echo '<p><b>Player Stats</b></p>';
+	    echo '<p>Goals: ' . getValue($row, 'goals') . '</p>';
+	    echo '<p>Saves: ' . getValue($row, 'saves') . '</p>';
+	    echo '<p>Matches Played: ' . getValue($row, 'matches_played') . '</p>';
+	    echo '<br />';
+	    echo '<p><b>Current Car</b></p>';
+	    echo '<p>Name: ' . getValue($row, 'car_name') . '</p>';
+	    echo '<p>Atenna: ' . getValue($row, 'antenna') . '</p>';
+	    echo '<p>Topper: ' . getValue($row, 'topper') . '</p>';
+	    echo '<p>Wheels: ' . getValue($row, 'wheels') . '</p>';
 	    echo '</div>';
 	    echo '</div>';
 	}

@@ -49,16 +49,15 @@
 
     <!-- /.container -->
     <div class="container">
-	<div>
-	    <a href="/add-profile.php" class="btn btn-info">Add New Profile</a>
-	</div>
-	<br />
 	<?php
+
+	$id = $_GET['id'];
 	
 	$db = new SQLite3('database.db');
 	$query = 'SELECT * FROM profile ' .
 		 'NATURAL LEFT JOIN player_statistics ' .
-		 'NATURAL LEFT JOIN player_car;';
+		 'NATURAL LEFT JOIN player_car ' .
+		 'WHERE p_id = ' . $id;
 
 	$res = $db->query($query);
 
@@ -73,21 +72,23 @@
 	}
 	
 	while ($row = $res->fetchArray()) {
-	    $id = $row['P_id'];
-
-	    $link = "/player-stats.php?id=$id";
-
 	    echo '<div id="player-list-con" class="jumbotron">';
-	    echo '<div id="player-name" class="row">';
-	    echo '<p class="col-md-4"><b>' . getValue($row, 'name') . '</b></p>';
-	    echo '<a href="/update-profile.php?id=' . $id . '" class="btn btn-info player-update-btn col-md-offset-6 col-md-1">Update</a>';
-	    echo '<a href="/delete-profile.php?id=' . $id . '" class="btn btn-danger player-del-btn col-md-1">Delete</a>';
-	    echo '</div>';
 	    echo '<div class="player-stats-con row">';
+	    echo '<h3>Stats for ' . getValue($row, 'name') . '</h3>';
 	    echo '<p><b>Player Info</b></p>';
 	    echo '<p>Clan: ' . getValue($row, 'clan') . '</p>';
 	    echo '<p>Email: ' . getValue($row, 'email') . '</p>';
-	    echo '<a class="btn btn-info" href="' . $link . '">Stats</a>';
+	    echo '<br />';
+	    echo '<p><b>Player Stats</b></p>';
+	    echo '<p>Goals: ' . getValue($row, 'goals') . '</p>';
+	    echo '<p>Saves: ' . getValue($row, 'saves') . '</p>';
+	    echo '<p>Matches Played: ' . getValue($row, 'matches_played') . '</p>';
+	    echo '<br />';
+	    echo '<p><b>Current Car</b></p>';
+	    echo '<p>Name: ' . getValue($row, 'car_name') . '</p>';
+	    echo '<p>Atenna: ' . getValue($row, 'antenna') . '</p>';
+	    echo '<p>Topper: ' . getValue($row, 'topper') . '</p>';
+	    echo '<p>Wheels: ' . getValue($row, 'wheels') . '</p>';
 	    echo '</div>';
 	    echo '</div>';
 	}
