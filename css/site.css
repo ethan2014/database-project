@@ -1,0 +1,60 @@
+#player-list-con {
+    
+}
+
+#player-list-con p {
+    margin: 0;
+    font-size: 16px;
+}
+
+#player-name {
+    background-color: #C0FFA8;
+    border-radius: 5px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.player-stats-con {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.player-del-btn {
+    margin-top: 7px;
+    left: -7px;
+}
+
+.player-update-btn {
+    margin-top: 7px;
+    left: -14px;
+}
+
+#form-con {
+    width: 50%;
+}
+
+#match-info-con {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#team0-con {
+    padding: 10px;
+    border: 1px solid orange;
+    border-radius: 5px;
+}
+
+#team1-con {
+    padding: 10px;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+
+.player-con {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}

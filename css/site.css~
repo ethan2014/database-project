@@ -1,0 +1,29 @@
+#player-list-con {
+
+}
+
+#player-list-con p {
+    margin: 0;
+    font-size: 16px;
+}
+
+#player-name {
+    background-color: #C0FFA8;
+    border-radius: 5px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.player-del-btn {
+    margin-top: 7px;
+    left: -7px;
+}
+
+.player-update-btn {
+    margin-top: 7px;
+    left: -14px;
+}
+
+#form-con {
+    width: 50%;
+}
