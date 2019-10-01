@@ -71,15 +71,15 @@
     <div class="container">
 	<form type="GET" action="update-existing-profile.php" id="form-con">
 	    <input type="hidden" id="id" name="id" value="<?php echo $id; ?>">
-	    <fieldset clsas="form-group">
+	    <fieldset class="form-group">
 		<label for="name">Name</label>
 		<input type="text" id="name" name="name" class="form-control" value="<?php echo $name; ?>">
 	    </fieldset>
-	    <fieldset clsas="form-group">
+	    <fieldset class="form-group">
 		<label for="clan">Clan</label>
 		<input type="text" id="clan" name="clan" class="form-control" value="<?php echo $clan; ?>">
 	    </fieldset>
-	    <fieldset clsas="form-group">
+	    <fieldset class="form-group">
 		<label for="email">Email</label>
 		<input type="text" id="email" name="email" class="form-control" value="<?php echo $email; ?>">
 	    </fieldset>

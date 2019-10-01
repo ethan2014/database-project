@@ -62,15 +62,15 @@
     <!-- /.container -->
     <div class="container">
 	<form type="GET" action="create-new-profile.php" id="form-con">
-	    <fieldset clsas="form-group">
+	    <fieldset class="form-group">
 		<label for="name">Name</label>
 		<input type="text" id="name" name="name" class="form-control" value="<?php echo $name; ?>">
 	    </fieldset>
-	    <fieldset clsas="form-group">
+	    <fieldset class="form-group">
 		<label for="clan">Clan</label>
 		<input type="text" id="clan" name="clan" class="form-control" value="<?php echo $clan; ?>">
 	    </fieldset>
-	    <fieldset clsas="form-group">
+	    <fieldset class="form-group">
 		<label for="email">Email</label>
 		<input type="text" id="email" name="email" class="form-control" value="<?php echo $email; ?>">
 	    </fieldset>
