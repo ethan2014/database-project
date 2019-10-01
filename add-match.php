@@ -95,29 +95,29 @@
 	    <form type="GET" action="create-new-match.php" id="form-con">
 		<div id="match-info-con">
 		    <h4>Match Info</h4>
-		    <fieldset clsas="form-group">
+		    <fieldset class="form-group">
 			<label for="duraction">Duration</label>
 			<input type="number" min="1" value="1"
 			       id="duration" name="duration" class="form-control">
 		    </fieldset>
-		    <fieldset clsas="form-group">
+		    <fieldset class="form-group">
 			<label for="blue-goals">Blue Team Goals</label>
 			<input type="number" min="0" value="0"
 			       id="blue-goals" name="blue-goals" class="form-control">
 		    </fieldset>
-		    <fieldset clsas="form-group">
+		    <fieldset class="form-group">
 			<label for="orange-goals">Orange Team Goals</label>
 			<input type="number" min="0" value="0"
 			       id="orange-goals" name="orange-goals" class="form-control">
 		    </fieldset>
-		    <fieldset clsas="form-group">
+		    <fieldset class="form-group">
 			<label for="winning-team">Winning Team</label>
 			<select id="winning-team" name="winning-team" class="form-control">
 			    <option value="0">Orange Team</option>
 			    <option value="1">Blue Team</option>
 			</select>
 		    </fieldset>
-		    <fieldset clsas="form-group">
+		    <fieldset class="form-group">
 			<label for="match-format">Format</label>
 			<select id="match-format" name="match-format" class="form-control">
 			    <option value="0">1v1</option>
@@ -131,7 +131,7 @@
 		    <h4>Orange Team</h4>
 		    <div id="team0-1" class="player-con">
 			<h5>Player 1</h5>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="id0-1">Player Name</label>
 			    <select id="id0-1" name="id0-1" class="form-control">
 				<?php
@@ -141,17 +141,17 @@
 				?>
 			    </select>
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="goals0-1">Goals</label>
 			    <input type="number" min="0" value="0" id="goals0-1"
 				   name="goals0-1" class="form-control">
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="distance0-1">Distance</label>
 			    <input type="number" min="0" value="0"
 				   id="distance0-1" name="distance0-1" class="form-control">
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="saves0-1">Saves</label>
 			    <input type="number" min="0" value="0"
 				   id="saves0-1" name="saves0-1" class="form-control">
@@ -160,7 +160,7 @@
 		    <br />
 		    <div id="team0-2" class="player-con">
 			<h5>Player 2</h5>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="id0-2">Player Name</label>
 			    <select id="id0-2" name="id0-2" class="form-control">
 				<?php
@@ -170,17 +170,17 @@
 				?>
 			    </select>
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="goals0-2">Goals</label>
 			    <input type="number" min="0" value="0"
 				   id="goals0-2" name="goals0-2" class="form-control">
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="distance0-2">Distance</label>
 			    <input type="number" min="0" value="0"
 				   id="distance0-2" name="distance0-2" class="form-control">
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="saves0-2">Saves</label>
 			    <input type="number" min="0" value="0"
 				   id="saves0-2" name="saves0-2" class="form-control">
@@ -189,7 +189,7 @@
 		    <br />
 		    <div id="team0-3" class="player-con">
 			<h5>Player 3</h5>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="id0-3">Player Name</label>
 			    <select id="id0-3" name="id0-3" class="form-control">
 				<?php
@@ -199,17 +199,17 @@
 				?>
 			    </select>
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="goals0-3">Goals</label>
 			    <input type="number" min="0" value="0"
 				   id="goals0-3" name="goals0-3" class="form-control">
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="distance0-3">Distance</label>
 			    <input type="number" min="0" value="0"
 				   id="distance0-3" name="distance0-3" class="form-control">
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="saves0-3">Saves</label>
 			    <input type="number" min="0" value="0"
 				   id="saves0-3" name="saves0-3" class="form-control">
@@ -221,7 +221,7 @@
 		    <h4>Blue Team</h4>
 		    <div id="team1-1" class="player-con">
 			<h5>Player 1</h5>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="id1-1">Player Name</label>
 			    <select id="id1-1" name="id1-1" class="form-control">
 				<?php
@@ -231,17 +231,17 @@
 				?>
 			    </select>
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="goals1-1">Goals</label>
 			    <input type="number" min="0" value="0"
 				   id="goals1-1" name="goals1-1" class="form-control">
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="distance1-1">Distance</label>
 			    <input type="number" min="0" value="0"
 				   id="distance1-1" name="distance1-1" class="form-control">
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="saves1-1">Saves</label>
 			    <input type="number" min="0" value="0"
 				   id="saves1-1" name="saves1-1" class="form-control">
@@ -250,7 +250,7 @@
 		    <br />
 		    <div id="team1-2" class="player-con">
 			<h5>Player 2</h5>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="id1-2">Player Name</label>
 			    <select id="id1-2" name="id1-2" class="form-control">
 				<?php
@@ -260,17 +260,17 @@
 				?>
 			    </select>
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="goals1-2">Goals</label>
 			    <input type="number" min="0" value="0"
 				   id="goals1-2" name="goals1-2" class="form-control">
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="distance1-2">Distance</label>
 			    <input type="number" min="0" value="0"
 				   id="distance1-2" name="distance1-2" class="form-control">
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="saves1-2">Saves</label>
 			    <input type="number" min="0" value="0"
 				   id="saves1-2" name="saves1-2" class="form-control">
@@ -279,7 +279,7 @@
 		    <br />
 		    <div id="team1-3" class="player-con">
 			<h5>Player 3</h5>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="id1-3">Player Name</label>
 			    <select id="id1-3" name="id1-3" class="form-control">
 				<?php
@@ -289,17 +289,17 @@
 				?>
 			    </select>
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="goals1-3">Goals</label>
 			    <input type="number" min="0" value="0"
 				   id="goals1-3" name="goals1-3" class="form-control">
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="distance1-3">Distance</label>
 			    <input type="number" min="0" value="0"
 				   id="distance1-3" name="distance1-3" class="form-control">
 			</fieldset>
-			<fieldset clsas="form-group">
+			<fieldset class="form-group">
 			    <label for="saves1-3">Saves</label>
 			    <input type="number" min="0" value="0"
 				   id="saves1-3" name="saves1-3" class="form-control">
